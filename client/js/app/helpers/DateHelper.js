@@ -1,6 +1,6 @@
 class DateHelper {
 
-  dataParaTexto(data) {
+  static dataParaTexto(data) {
 
     return data.getDate()
       + '/' + (data.getMonth() + 1)
@@ -8,7 +8,7 @@ class DateHelper {
 
   }
 
-  textoParaData(texto) {
+  static textoParaData(texto) {
 
     return new Date(...texto.split('-').map((item, indice) => item - indice % 2));
 
